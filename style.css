@@ -1,0 +1,27 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.dh-container {
+	display: flex;
+}
+
+.snack-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 80vw;
+}
+
+.snack-image-container {
+	flex-basis: 33%;
+
+	display: flex;
+	justify-content: center;
+
+	padding: 15px;
+	background-color: aqua;
+}
