@@ -3,7 +3,6 @@
 */
 
 let snackCounter = 0;
-const counterText = document.getElementsByClassName('counter-text')[0];
 
 const snackContainer = document.getElementsByClassName('snack-container')[0];
 const wormImage = document.getElementById('worm-image');
@@ -17,7 +16,7 @@ snackContainer.addEventListener('click', (event) => {
 	if (element.tagName === 'IMG') {
 		if (element.id === 'worm-image') {
 			snackCounter += 1;
-			updateSnackCounter;
+			updateSnackCounter();
 		} else {
 			console.log("That's not DH's favorite snack!");
 		}
@@ -31,4 +30,7 @@ setInterval(() => {
 }, 2000);
 
 // to-do
-function updateSnackCounter() {}
+function updateSnackCounter() {
+	const counterText = document.getElementsByClassName('counter-text')[0];
+	counterText.innerHTML = `Snacks received: ${snackCounter}`;
+}
